@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mr. Nut Portal - Login</title>
+    <style>
+        /* We will create css code here, later */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(to bottom, rgba(75, 0, 130, 0.7), rgba(144, 4, 238, 0.908));
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .login-container {
+            background-color: rgba(255, 255, 255, 0.3);
+            padding: 20px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0px 0px 10px rgb(0, 0, 0, 0.3);
+            width: 300px;
+            text-align: center;
+        }
+
+        .login-container h2 {
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .login-form {
+            margin-top: 20px;
+        }
+
+        .login-form input[type="text"],
+        .login-form input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px  solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .login-form input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .login-form input[type = "submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .login-links {
+            margin-top: 20px;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .login-links .forgot-password {
+            color: #1976d2;
+            text-decoration: none;
+        }
+
+        .login-links .create-account {
+            color: #ffeb3b;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login-container">
+        <h2>Mr. Nut Portal - Login</h2>
+        <form class="login-form">
+            <input type="text">
+            <input type="password">
+            <div class="login-links">
+                <label>
+                    <input type="checkbox"> Remember Me
+                </label>
+                <a href="#" class="forgot-password">Forgot Password</a>
+            </div>
+            <input type="submit" value="Login">
+        </form>
+        <div class="login-links">
+            <span>Don't have an account?</span>
+            <a href="#" class="create-account">Create Account</a>
+        </div>
+    </div>
+</body>
+ 
+</html>

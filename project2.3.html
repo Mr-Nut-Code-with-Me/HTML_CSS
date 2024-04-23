@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f5ff;
+        }
+
+        /* Let style for header part */
+
+        header {
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #2980b9;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        nav ul li a {
+            position: relative;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+
+        nav ul li a::after {
+            transform: scaleX(0);
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #fff;
+            transform-origin: bottom right;
+            transition: transform 0.25s ease-out;
+        }
+
+        .banner {
+            background-image: url("assets/hero1.jpg");
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            text-align: center;
+            padding: 150px 0;
+        }
+
+        .search-fields {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+        }
+
+        .search-fields input[type="text"],
+        .search-fields select {
+            padding: 10px;
+            margin: 5px;
+            width: 200px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .search-fields button {
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            background-color: #2980b9;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .properties-title {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .featured-properties {
+            padding: 20px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .property-card {
+            width: calc(33.33% - 20px);
+            margin: 10px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .property-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        .property-info {
+            padding: 10px;
+        }
+
+        .property-info {
+            padding: 10px
+        }
+
+        .property-info h3 {
+            color: #2980b9;
+            margin-bottom: 5px;
+        }
+
+        .property-info p {
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        .property-info button {
+            background-color: #2980b9;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .about-section {
+            background-color: #fff;
+            padding: 50px;
+            text-align: center;
+        }
+
+        .about-section h2 {
+            margin-bottom: 20px;
+        }
+
+        .about-section p {
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .enquiry-section {
+            display: flex;
+            justify-content: space-around;
+            padding: 50px;
+            text-align: center;
+        }
+
+        .enquiry-form, .contact-info {
+            width: 45%;
+        }
+
+        .enquiry-form form {
+            text-align: left;
+        }
+
+        .enquiry-form input,
+        .enquiry-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .enquiry-form button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #2980b9;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .contact-info p {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background-color: #2980b9;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Real Estate Website (Demo)</h1>
+    </header>
+    <nav>
+        <ul>
+            <li>
+                <a href="#">Home</a>
+            </li>
+            <li>
+                <a href="#">Properties</a>
+            </li>
+            <li>
+                <a href="#">About</a>
+            </li>
+            <li>
+                <a href="#">Contact</a>
+            </li>
+        </ul>
+    </nav>
+
+    <section class="banner">
+        <div class="search-fields">
+            <input type="text" placeholder="Search...">
+            <select>
+                <option value="">Location</option>
+                <option value="">City</option>
+                <option value="">Suburb</option>
+                <option value="">Countryside</option>
+            </select>
+            <select>
+                <option value="">Property Type</option>
+                <option value="">House</option>
+                <option value="">Appartment</option>
+                <option value="">Condo</option>
+            </select>
+            <button>Search</button>
+        </div>
+    </section>
+
+    <!-- Let Create Product Card Views -->
+    <h2 class="properties-title">Featured Properties</h2>
+    <section class="featured-properties">
+        <div class="property-card">
+            <img src="assets/property1.jpg" alt="Property Image">
+            <div class="property-info">
+                <h3>Property 1</h3>
+                <p>Short Discription of Property 1</p>
+                <p>Price: $500,000</p>
+                <button>View Details</button>
+            </div>
+        </div>
+        <div class="property-card">
+            <img src="assets/property2.jpg" alt="Property Image">
+            <div class="property-info">
+                <h3>Property 2</h3>
+                <p>Short Discription of Property 2</p>
+                <p>Price: $500,000</p>
+                <button>View Details</button>
+            </div>
+        </div>
+        <div class="property-card">
+            <img src="assets/property3.jpg" alt="Property Image">
+            <div class="property-info">
+                <h3>Property 3</h3>
+                <p>Short Discription of Property 3</p>
+                <p>Price: $500,000</p>
+                <button>View Details</button>
+            </div>
+        </div>
+    </section>
+    <!-- In this video, we will create 
+        About Us
+        Enquiry Form
+        Contact Information
+        Footer
+    -->
+    <section class="about-section">
+        <h2>About Us</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui veritatis, placeat vero consectetur quod est, excepturi incidunt dicta dolorem pariatur, id dolorum. Sed cumque corporis, sequi nihil explicabo quis soluta?
+        </p>
+    </section>
+
+    <section class="enquiry-section">
+        <div class="enquiry-form">
+            <h2>
+                Make an Enquiry
+            </h2>
+            <form>
+                <input type="text" placeholder="Your Name">
+                <input type="email" placeholder="Your Email">
+                <input type="tel" placeholder="Your Phone">
+                <textarea placeholder="Your Message"></textarea>
+                <button>Submit</button>
+            </form>
+        </div>
+
+        <div class="contact-info">
+            <h2>Contact Information</h2>
+            <p>
+                <strong>Address:</strong>
+                No 123, 456 Street, ABC City
+            </p>
+            <p>
+                <strong>
+                    Phone:
+                </strong>
+                +123 456 7890
+            </p>
+            <p>
+                <strong>
+                    Email:
+                </strong>
+                abcdef@ghijk.com
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <p>
+            &copy; 2024 Mr. Nut - Code with me! All right reserved.
+        </p>
+    </footer>
+</body>
+
+</html>
